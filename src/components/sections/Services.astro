@@ -1,0 +1,46 @@
+---
+const services = [
+	{
+		number: '01',
+		title: 'Website Creation',
+		description: 'Responsive, approachable websites built around your content, audience, and goals.',
+	},
+	{
+		number: '02',
+		title: 'System Development',
+		description: 'Purposeful web-based tools for organizing information and everyday workflows.',
+	},
+	{
+		number: '03',
+		title: 'AI Automation',
+		description: 'Exploring practical ways to simplify repetitive tasks with AI-powered workflows.',
+	},
+	{
+		number: '04',
+		title: 'UI/UX Design',
+		description: 'Clear layouts and thoughtful interface details that make products easier to use.',
+	},
+];
+---
+
+<section class="section-shell section-services" id="services" aria-labelledby="services-title">
+	<div class="container">
+		<div class="section-heading section-heading-row" data-reveal>
+			<div>
+				<p class="eyebrow"><span class="section-count">04 / 06</span> How I can contribute</p>
+				<h2 id="services-title">Ideas into <span>action.</span></h2>
+			</div>
+			<p class="heading-aside">Areas I’m excited to explore and help bring to life through thoughtful digital work.</p>
+		</div>
+		<div class="service-list">
+			{services.map((service) => (
+				<article class="service-row" data-reveal>
+					<span class="service-number">{service.number}</span>
+					<h3>{service.title}</h3>
+					<p>{service.description}</p>
+					<span class="service-arrow" aria-hidden="true">↗</span>
+				</article>
+			))}
+		</div>
+	</div>
+</section>

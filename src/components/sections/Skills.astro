@@ -1,0 +1,48 @@
+---
+const skillGroups = [
+	{
+		number: '01',
+		title: 'Programming',
+		description: 'Building blocks for responsive websites and practical web systems.',
+		skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'MySQL', 'Astro'],
+	},
+	{
+		number: '02',
+		title: 'Creative Design',
+		description: 'Visual thinking that helps digital products feel clear and intentional.',
+		skills: ['UI layout', 'Typography', 'Color & composition', 'Visual storytelling'],
+	},
+	{
+		number: '03',
+		title: 'Problem Solving',
+		description: 'A thoughtful approach to understanding needs and breaking down challenges.',
+		skills: ['Logical thinking', 'Database planning', 'Research', 'Iterative improvement'],
+	},
+];
+---
+
+<section class="section-shell section-tint" id="skills" aria-labelledby="skills-title">
+	<div class="container">
+		<div class="section-heading section-heading-row" data-reveal>
+			<div>
+				<p class="eyebrow"><span class="section-count">03 / 06</span> What I bring</p>
+				<h2 id="skills-title">Skills &amp; <span>interests.</span></h2>
+			</div>
+			<p class="heading-aside">A growing toolkit, shaped by study, practice, and the projects I take on.</p>
+		</div>
+		<div class="skill-grid">
+			{skillGroups.map((group) => (
+				<article class="skill-card card-surface" data-reveal>
+					<div class="skill-card-top"><span>{group.number}</span><span class="skill-mark" aria-hidden="true">✳</span></div>
+					<h3>{group.title}</h3>
+					<p>{group.description}</p>
+					<div class="skill-indicator" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+					<ul class="tag-list">
+						{group.skills.map((skill) => <li>{skill}</li>)}
+					</ul>
+				</article>
+			))}
+		</div>
+		<p class="skills-caption"><span class="tiny-square"></span> Skills shown are areas of interest and ongoing practice.</p>
+	</div>
+</section>
